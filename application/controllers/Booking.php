@@ -13,6 +13,7 @@ class Booking extends CI_Controller {
             "BOOKINGID" => 'COVID'.time(),
             "BOOKDATE" => $this->input->post(''),
             "BOOKTIME" => $this->input->post(''),
+			"BOOKQUE" => $this->input->post(''),
             "IDCARD" => $this->input->post(''),
 			"MEMBERNAME" => $this->input->post(''),
 			"PHONENUMBER" => $this->input->post(''),
