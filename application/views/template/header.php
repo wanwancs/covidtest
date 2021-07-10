@@ -5,11 +5,11 @@
         <meta charset="utf-8" />
         <title>จองคิวตรวจโควิด ในพื้นที่กรุงเทพมหานคร</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
-        <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
-        <meta name="author" content="Shreethemes" />
-        <meta name="email" content="support@shreethemes.in" />
-        <meta name="website" content="https://shreethemes.in" />
+        <meta name="description" content="จองคิวตรวจโควิด ในพื้นที่กรุงเทพมหานคร" />
+        <meta name="keywords" content="จองคิวตรวจโควิด ในพื้นที่กรุงเทพมหานคร" />
+        <meta name="author" content="Nutmor" />
+        <meta name="email" content="info@nutmor.com" />
+        <meta name="website" content="https://nutmor.com" />
         <meta name="Version" content="v3.2.0" />
         <!-- favicon -->
         <link rel="shortcut icon" href="images/favicon.ico">
@@ -28,6 +28,17 @@
         <style>
             .categories a:hover {
                 color: #FFFFFF !important;
+            }
+            .bg-half {
+                padding: 84px 0 90px;
+                background-size: cover;
+                align-self: center;
+                position: relative;
+                background-position: center center;
+            }
+            .section {
+                padding: 50px 0;
+                position: relative;
             }
         </style>
     </head>
@@ -53,7 +64,6 @@
                         <li><a href="<?php echo base_url('booking');?>" class="sub-menu-item">จองคิว</a></li>
                         <li><a href="<?php echo base_url('booking_check');?>" class="sub-menu-item">ตรวจสอบการจอง</a></li>
                         <li><a href="<?php echo base_url();?>" class="sub-menu-item">เตียงสนาม</a></li>
-                        <li><a href="<?php echo base_url();?>" class="sub-menu-item">วัคซีน</a></li>
                         <li><a href="<?php echo base_url('contact');?>" class="sub-menu-item">ติดต่อสอบถาม</a></li>
                     </ul>
                 </div>

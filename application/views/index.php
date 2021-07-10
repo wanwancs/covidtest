@@ -8,7 +8,7 @@
                     <h1 class="heading mb-3">หน่วยบริการ <span class="text-primary typewrite" data-period="2000" data-type='[ "วัดพระศรีมหาธาตุวรมหาวิหาร", "สนามกีฬาเฉลิมพระเกียรติ 72 พรรษา", "วัดบางขุนเทียนนอก", "ตลาดบางแคภิรมย์" ]'> <span class="wrap"></span> </span>
                     </h1>
                     <p class="para-desc mx-auto text-muted">ตรวจเชิงรุก COVID-19 ในพื้นที่กรุงเทพมหานคร</p>
-                    <form class="rounded p-4 mt-4 bg-white" action="<?php echo base_url(" booking ")?>" method="get">
+                    <form class="rounded p-4 mt-4 bg-white" action="<?php echo base_url('booking')?>" method="get">
                         <div class="row text-start">
                             <div class="col-lg-12 col-md-8">
                                 <div class="row align-items-center">
@@ -36,7 +36,7 @@
 
                                     <div class="col-md-4 mt-lg-4">
                                         <div class="d-grid">
-                                            <input type="submit" style='margin-top: 12px !important;' id="search" name="search" class="searchbtn btn btn-primary" value="จองคิว">
+                                            <input type="submit" style='margin-top: 12px !important;' class="searchbtn btn btn-primary" value="จองคิว">
                                         </div>
                                     </div>
                                     <!--end col-->
