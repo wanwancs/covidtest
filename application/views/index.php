@@ -8,18 +8,19 @@
                     <h1 class="heading mb-3">หน่วยบริการ <span class="text-primary typewrite" data-period="2000" data-type='[ "วัดพระศรีมหาธาตุวรมหาวิหาร", "สนามกีฬาเฉลิมพระเกียรติ 72 พรรษา", "วัดบางขุนเทียนนอก", "ตลาดบางแคภิรมย์" ]'> <span class="wrap"></span> </span>
                     </h1>
                     <p class="para-desc mx-auto text-muted">ตรวจเชิงรุก COVID-19 ในพื้นที่กรุงเทพมหานคร</p>
-                    <form class="rounded p-4 mt-4 bg-white">
+                    <form class="rounded p-4 mt-4 bg-white" action="<?php echo base_url(" booking ")?>" method="get">
                         <div class="row text-start">
                             <div class="col-lg-12 col-md-8">
                                 <div class="row align-items-center">
                                     <div class="col-md-4 mt-4 mt-sm-0">
                                         <div class="mb-0">
                                             <label class="form-label"> สถานที่ : </label>
-                                            <select class="form-control custom-select">
-                                                <option selected="">วัดพระศรีมหาธาตุวรมหาวิหาร</option>
-                                                <option value="AF">สนามกีฬาเฉลิมพระเกียรติ 72 พรรษา</option>
-                                                <option value="AX">วัดบางขุนเทียนนอก</option>
-                                                <option value="AL">ตลาดบางแคภิรมย์</option>
+                                            <select class="form-control custom-select" name="place">
+                                                <?php if(!empty($places)):?>
+                                                    <?php foreach($places as $item):?>
+                                                        <option value="<?php echo $item->TBPlaceID;?>"><?php echo $item->TBPlaceName;?></option>
+                                                    <?php endforeach;?>
+                                                <?php endif;?>
                                             </select>
                                         </div>
                                     </div>
