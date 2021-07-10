@@ -14,7 +14,7 @@
         <!-- favicon -->
         <link rel="shortcut icon" href="images/favicon.ico">
         <!-- Bootstrap -->
-        <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://nutmor.com/covidtest/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- Icons -->
         <link href="<?php echo base_url();?>assets/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
