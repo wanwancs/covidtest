@@ -10,10 +10,13 @@ class Booking extends CI_Controller {
 	//บันทึกข้อมูลการจองคิวตรวจโควิด
     public function insert_booking(){
         $data = array(
-            "" => $this->input->post(''),
-            "" => $this->input->post(''),
-            "" => $this->input->post(''),
-            "" => $this->input->post('')
+            "BOOKINGID" => 'COVID'.time(),
+            "BOOKDATE" => $this->input->post(''),
+            "BOOKTIME" => $this->input->post(''),
+            "IDCARD" => $this->input->post(''),
+			"MEMBERNAME" => $this->input->post(''),
+			"PHONENUMBER" => $this->input->post(''),
+			"LINEID" => $this->input->post('')
         );
         $this->booking_model->insert_booking($data);
         $this->session->set_userdata("message", "บันทึกรายการเรียบร้อย");
