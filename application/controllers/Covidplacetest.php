@@ -10,10 +10,7 @@ class Covidplacetest extends CI_Controller {
 	//บันทึกข้อมูลการจองคิวตรวจโควิด
     public function insert_covidplacetest(){
         $data = array(
-            "" => $this->input->post(''),
-            "" => $this->input->post(''),
-            "" => $this->input->post(''),
-            "" => $this->input->post('')
+            "TBPlaceName" => $this->input->post('')
         );
         $this->covidplacetest_model->insert_covidplacetest($data);
         $this->session->set_userdata("message", "บันทึกรายการเรียบร้อย");
