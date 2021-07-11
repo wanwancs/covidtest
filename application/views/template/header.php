@@ -43,7 +43,7 @@
         </style>
     </head>
 
-    <body></body>
+    <body>
         <header id="topnav" class="defaultscroll sticky">
             <div class="container">
                 <a class="logo" href="<?php echo base_url();?>">Nutmor</a>
@@ -62,9 +62,9 @@
                     <ul class="navigation-menu">
                         <li><a href="<?php echo base_url('');?>" class="sub-menu-item">หน้าแรก</a></li>
                         <li><a href="<?php echo base_url('booking');?>" class="sub-menu-item">จองคิว</a></li>
-                        <li><a href="<?php echo base_url('booking_check');?>" class="sub-menu-item">ตรวจสอบการจอง</a></li>
-                        <li><a href="<?php echo base_url();?>" class="sub-menu-item">เตียงสนาม</a></li>
-                        <li><a href="<?php echo base_url('contact');?>" class="sub-menu-item">ติดต่อสอบถาม</a></li>
+                        <li><a href="<?php echo base_url('booking-check');?>" class="sub-menu-item">ตรวจสอบการจอง</a></li>
+                        <li><a href="<?php echo base_url('');?>" class="sub-menu-item">เตียงสนาม</a></li>
+                        <li><a href="<?php echo base_url('');?>" class="sub-menu-item">ติดต่อสอบถาม</a></li>
                     </ul>
                 </div>
             </div>

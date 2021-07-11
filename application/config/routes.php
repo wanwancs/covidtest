@@ -56,3 +56,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['booking'] = 'booking/index';
 $route['time'] = 'booking/time';
 $route['confirm'] = 'booking/confirm';
+$route['check-uniq'] = 'booking/checkUniq';
+$route['booking-check'] = 'booking/bookingCheck';
+$route['booking-list'] = 'booking/bookingList';

@@ -103,6 +103,43 @@ class Booking extends CI_Controller {
         }   
     }
 
+    public function bookingList(){
+        if (!empty($this->input->get('id_card'))) {
+            $idCard = $this->input->get('id_card');
+            
+            $booking = $this->Booking_model->getBookingByIdCard($idCard);
+            
+            $data = [
+                'booking' => $booking,
+            ];
+
+            $this->load->view('booking_list', $data);
+        }
+    }
+
+    public function checkUniq(){
+        $idCard = $this->input->get('idCard');
+        $date = $this->input->get('date');
+
+        $booking = $this->Booking_model->checkUniq($idCard, $date);
+
+        header('Content-Type: application/json');
+
+        if ($booking) {
+            echo json_encode(['result' => true]);
+        }else{
+            echo json_encode(['result' => false]);
+        }
+    }
+
+    public function bookingCheck(){
+        $this->load->view('template/header');
+        $this->load->view('detail_booking');
+        $this->load->view('template/footer');
+    }
+
+
+
 	//บันทึกข้อมูลการจองคิวตรวจโควิด
     public function insert_booking(){
         $data = array(

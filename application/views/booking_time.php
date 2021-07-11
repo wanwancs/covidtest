@@ -1,13 +1,13 @@
 <div class="row">
     <div class="col mt-4 pt-2">
-        <div class="p-4 border-bottom">
+        <div class="pb-2 border-bottom">
             <h6 class="title mb-0">กรุณาเลือกคิว</h6>
         </div>
     </div>
 </div>
 <?php 
     date_default_timezone_set("Asia/Bangkok");
-    $timeArray = explode("-",$time);
+    $timeArray = explode("-", $time);
     $timeStart = $timeArray[0];
     $endTime = $timeArray[1];
 
@@ -32,10 +32,10 @@
     
     $index = 1;
     while($timeStart !== $endTime){
-        
+        $textTime = $timeStart."-";
         $timeStart = strtotime("+".$minute." minutes", strtotime($timeStart));
         $timeStart = date('H:i', $timeStart);
-        $textTime = $timeStart."-".$timeStart;
+        $textTime .= $timeStart;
 
         $currentQueue1 = "A".(($timeQueue * intval($minute)) + $index);
         $currentQueue2 = "A".(($timeQueue * intval($minute)) + $index + 1);

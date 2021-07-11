@@ -94,8 +94,8 @@
                     <img src="<?php echo base_url();?>assets/images/place1.jpg" class="img-fluid" alt="">
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="" class="btn btn-outline-primary">จองคิว</a></li>
-                            <li class="h6 mb-0 jobs">125 คิว</li>
+                            <li><a href="<?php echo base_url('booking');?>?place=1&date=<?php echo date('Y-m-d');?>" class="btn btn-outline-primary">จองคิว</a></li>
+                            <li class="h6 mb-0 jobs"><?php echo number_format($stat1);?> คิว</li>
                         </ul>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                     <img src="<?php echo base_url();?>assets/images/place2.jpg" class="img-fluid" alt="">
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="" class="btn btn-outline-primary">จองคิว</a></li>
-                            <li class="h6 mb-0 jobs">125 คิว</li>
+                            <li><a href="<?php echo base_url('booking');?>?place=2&date=<?php echo date('Y-m-d');?>" class="btn btn-outline-primary">จองคิว</a></li>
+                            <li class="h6 mb-0 jobs"><?php echo number_format($stat2);?> คิว</li>
                         </ul>
                     </div>
                 </div>
@@ -120,8 +120,8 @@
                     <img src="<?php echo base_url();?>assets/images/place3.jpg" class="img-fluid" alt="">
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="" class="btn btn-outline-primary">จองคิว</a></li>
-                            <li class="h6 mb-0 jobs">125 คิว</li>
+                            <li><a href="<?php echo base_url('booking');?>?place=3&date=<?php echo date('Y-m-d');?>" class="btn btn-outline-primary">จองคิว</a></li>
+                            <li class="h6 mb-0 jobs"><?php echo number_format($stat3);?> คิว</li>
                         </ul>
                     </div>
                 </div>
@@ -132,8 +132,8 @@
                     <img src="<?php echo base_url();?>assets/images/place4.jpg" class="img-fluid" alt="">
                     <div class="card-body">
                         <ul class="list-unstyled d-flex justify-content-between mb-0">
-                            <li><a href="" class="btn btn-outline-primary">จองคิว</a></li>
-                            <li class="h6 mb-0 jobs">125 คิว</li>
+                            <li><a href="<?php echo base_url('booking');?>?place=4&date=<?php echo date('Y-m-d');?>" class="btn btn-outline-primary">จองคิว</a></li>
+                            <li class="h6 mb-0 jobs"><?php echo number_format($stat4);?> คิว</li>
                         </ul>
                     </div>
                 </div>
