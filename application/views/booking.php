@@ -220,13 +220,14 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
-    var minutesToAdd = 60;
+    let minutesToAdd = 60;
     let timeStart = "08:00";
     let timeEnd = "17:00";
 
     while (timeEnd !== timeStart) {
-        var currentDate = new Date("2021-07-10 " + timeStart);
-        var futureDate = new Date(currentDate.getTime() + minutesToAdd * 60000);
+        let currentDate = new Date("2021-07-10T" + timeStart);
+        let futureDate = new Date(currentDate.getTime() + minutesToAdd * 60000);
+
         if (timeStart !== '12:00') {
             let textTime = "เช้า ";
             if (futureDate.getHours() > 12) {
