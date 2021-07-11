@@ -10,7 +10,7 @@
                     <p class="para-desc mx-auto text-muted">ตรวจเชิงรุก COVID-19 ในพื้นที่กรุงเทพมหานคร</p>
                     <form class="rounded p-4 mt-4 bg-white" action="<?php echo base_url('booking')?>" method="get">
                         <div class="row text-start">
-                            <div class="col-lg-12 col-md-8">
+                            <div class="col-lg-12 col-md-12">
                                 <div class="row align-items-center">
                                     <div class="col-md-4 mt-4 mt-sm-0">
                                         <div class="mb-0">
