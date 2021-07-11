@@ -6,11 +6,11 @@ Class Covidplacetest_model extends CI_Model{
     public function getData(){
         $query =  $this->db->get('tbplacecovidtest');
 
-       if ($query->num_rows() >0) {
-           return $query->result();
-       }else{
-           return array();
-       }
+        if ($query->num_rows() >0) {
+            return $query->result();
+        }else{
+            return array();
+        }
     }
 
     //เพิ่มสถานที่จองคิวตรวจโควิด
