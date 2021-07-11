@@ -94,11 +94,11 @@
 
                             <div class="col mt-4 pt-2" id="forms-detail" style="display:none">
                                 <div class="">
-                                    <div class="p-4 border-bottom">
+                                    <div class="pb-4 border-bottom">
                                         <h6 class="title mb-0"> ข้อมูลผู้จอง </h6>
                                     </div>
 
-                                    <div class="p-4">
+                                    <div class="mt-2">
 
                                         <div class="row">
                                             <div class="col-md-12">

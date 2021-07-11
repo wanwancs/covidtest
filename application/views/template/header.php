@@ -40,6 +40,11 @@
                 padding: 50px 0;
                 position: relative;
             }
+            @media only screen and (max-width: 600px) {
+                .text-queue{
+                    display : none;
+                }
+            }
         </style>
     </head>
 

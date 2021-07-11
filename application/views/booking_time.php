@@ -60,35 +60,35 @@
         }
        ?>
 <div class="row">
-    <div class="col-2 mt-4 pt-2">
+    <div class="col-md-2 col-sm-2 mt-4 pt-2">
         <?php echo $textTime;?>
     </div>
-    <div class="col-6 mt-4 pt-2">
+    <div class="col-md-10 col-sm-10 mt-1 pt-2">
         <?php if($queue1):?>
         <a href="javascript:void(0)" class="btn btn-pills btn-outline-light mt-2 me-2">
-            <?php echo $currentQueue1;?> : จองแล้ว</a>
+            <?php echo $currentQueue1;?><span class="text-queue"> : จองแล้ว</span></a>
         <?php endif;?>
         <?php if(!$queue1):?>
         <a href="javascript:void(0)" onclick="selectQueue('<?php echo $currentQueue1;?>', '<?php echo $textTime;?>')" class="btn btn btn-pills btn-outline-primary mt-2 me-2">
-            <?php echo $currentQueue1;?> : จองคิว</a>
+            <?php echo $currentQueue1;?><span class="text-queue"> : จองคิว</span></a>
         <?php endif;?>
 
         <?php if($queue2):?>
         <a href="javascript:void(0)" class="btn btn-pills btn-outline-light mt-2 me-2">
-            <?php echo $currentQueue2;?> : จองแล้ว</a>
+            <?php echo $currentQueue2;?><span class="text-queue"> : จองแล้ว</span></a>
         <?php endif;?>
         <?php if(!$queue2):?>
         <a href="javascript:void(0)" onclick="selectQueue('<?php echo $currentQueue2;?>', '<?php echo $textTime;?>')" class="btn btn btn-pills btn-outline-primary mt-2 me-2">
-            <?php echo $currentQueue2;?> : จองคิว</a>
+            <?php echo $currentQueue2;?><span class="text-queue"> : จองคิว</span></a>
         <?php endif;?>
 
         <?php if($queue3):?>
         <a href="javascript:void(0)" class="btn btn-pills btn-outline-light mt-2 me-2">
-            <?php echo $currentQueue3;?> : จองแล้ว</a>
+            <?php echo $currentQueue3;?><span class="text-queue"> : จองแล้ว</span></a>
         <?php endif;?>
         <?php if(!$queue3):?>
         <a href="javascript:void(0)" onclick="selectQueue('<?php echo $currentQueue3;?>', '<?php echo $textTime;?>')" class="btn btn btn-pills btn-outline-primary mt-2 me-2">
-            <?php echo $currentQueue3;?> : จองคิว</a>
+            <?php echo $currentQueue3;?><span class="text-queue"> : จองคิว</span></a>
         <?php endif;?>
     </div>
 </div>
