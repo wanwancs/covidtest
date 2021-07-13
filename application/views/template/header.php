@@ -40,6 +40,16 @@
                 padding: 50px 0;
                 position: relative;
             }
+            #topnav {
+                position: fixed;
+                right: 0;
+                left: 0;
+                top: 0;
+                z-index: 999;
+                background-color: white;
+                border: 0;
+                transition: all .5s ease;
+            }
             @media only screen and (max-width: 600px) {
                 .text-queue{
                     display : none;
@@ -49,7 +59,7 @@
     </head>
 
     <body>
-        <header id="topnav" class="defaultscroll sticky">
+        <header id="topnav" class="sticky">
             <div class="container">
                 <a class="logo" href="<?php echo base_url();?>">Nutmor</a>
                 <div class="menu-extras">
