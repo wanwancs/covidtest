@@ -80,6 +80,93 @@ background-size: cover;background-image: url('assets/images/covid.jpg');">
 
 
         <div class="row justify-content-center">
+        <div class="col-lg-10 mb-5">
+            <div class="title-heading text-center mt-4 mt-md-5 pt-md-5">
+                <div class="alert alert-light alert-pills" role="alert">
+        
+                    <span class="content" style="    font-size: 19px;"> ต้นแบบการจองเตียงสนาม <span
+                            class="badge rounded-pill bg-success me-1">ยังไม่เปิดให้บริการ</span></span>
+                </div>
+        
+        
+                <form class="rounded p-4 mt-4 bg-white" action="<?php echo base_url('booking-bed')?>" method="post">
+                    <div class="row text-start">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 mt-4 mt-sm-0">
+                                    <div class="mb-0">
+                                        <label class="form-label"> จังหวัด : </label>
+                                        <select class="form-control custom-select" name="province" id="province"
+                                            onchange="getAmphur(this.value)">
+                                            <option value="">กรุณาเลือกจังหวัด</option>
+                                            <?php if(!empty($province)):?>
+                                            <?php foreach($province as $item):?>
+                                            <option value="<?php echo $item->province_code;?>">
+                                                <?php echo $item->province_name;?>
+                                            </option>
+                                            <?php endforeach;?>
+                                            <?php endif;?>
+                                        </select>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-4 mt-4 mt-sm-0">
+                                    <div class="mb-0">
+                                        <label class="form-label"> อำเภอ/เขต : </label>
+                                        <select class="form-control custom-select" name="amphur" id="amphur" onchange="getDistrict(this.value)">
+                                            <option value="">กรุณาเลือกอำเภอ/เขต</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mt-4 mt-sm-0">
+                                    <div class="mb-0">
+                                        <label class="form-label"> ตำบล/แขวง : </label>
+                                        <select class="form-control custom-select" name="district" id="district" onchange="getBed(this.value)">
+                                            <option value="">กรุณาเลือกตำบล/แขวง</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 mt-4 mt-sm-0">
+                                    <div class="mb-0">
+                                        <label class="form-label"> สถานที่ : </label>
+                                        <select class="form-control custom-select" name="bedPlace" id="bedPlace">
+                                            <option value="">กรุณาเลือกสถานที่</option>
+                                        </select>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-4 mt-4 mt-sm-0">
+                                    <div class="mb-0">
+                                        <label class="form-label"> วันที่จอง : </label>
+                                        <input name="date" type="date" class="form-control" id="bedDate" name="bedDate"
+                                            placeholder="เลือกวันที่ :">
+                                    </div>
+                                </div>
+                                <!--end col-->
+        
+                                <div class="col-md-4 mt-lg-4">
+                                    <div class="d-grid">
+                                        <label class="form-label"> </label>
+                                        <input type="submit" style='margin-top: 12px !important;'
+                                            class="searchbtn btn btn-primary" value="จองเตียง">
+                                    </div>
+                                </div>
+                                <!--end col-->
+                            </div>
+                            <!--end row-->
+                        </div>
+                        <!---end col-->
+                    </div>
+                    <!--end row-->
+                </form>
+        
+            </div>
+        </div>
+        <hr>
             <div class="col-lg-10">
                 <div class="title-heading text-center mt-4 mt-md-5 pt-md-5">
                     <div class="alert alert-light alert-pills" role="alert">
@@ -265,4 +352,47 @@ background-size: cover;background-image: url('assets/images/covid.jpg');">
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
+
+    function getAmphur(provinceCode) {
+        $.ajax({
+            type: "get",
+            url: "<?php echo base_url('welcome/amphur')?>?province_code=" + provinceCode,
+        }).done(function (response) {
+            console.log(response.data);
+            $('#amphur').find('option').remove().end();
+            $("#amphur").append(new Option("กรุณาเลือกอำเภอ/เขต", ""));
+            for(let i = 0 ;i < response.data.length;i++){
+                $("#amphur").append(new Option(response.data[i].amphur_name, response.data[i].amphur_code));
+            }    
+        });
+    }
+
+    function getDistrict(amphurCode) {
+        $.ajax({
+            type: "get",
+            url: "<?php echo base_url('welcome/district')?>?amphur_code=" + amphurCode,
+        }).done(function (response) {
+            console.log(response.data);
+            $('#district').find('option').remove().end();
+            $("#district").append(new Option("กรุณาเลือกตำบล/แขวง", ""));
+            for(let i = 0 ;i < response.data.length;i++){
+                $("#district").append(new Option(response.data[i].district_name, response.data[i].district_code));
+            }    
+        });
+    }
+
+    function getBed(district) {
+        $.ajax({
+            type: "get",
+            url: "<?php echo base_url('welcome/bed')?>?district_code=" + district,
+        }).done(function (response) {
+            console.log(response.data);
+            $('#bedPlace').find('option').remove().end();
+            $("#bedPlace").append(new Option("กรุณาเลือกสถานที่", ""));
+            for(let i = 0 ;i < response.data.length;i++){
+                $("#bedPlace").append(new Option(response.data[i].filedbed_name, response.data[i].id));
+            }    
+        });
+    }
+
 </script>

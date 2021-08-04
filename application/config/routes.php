@@ -59,3 +59,5 @@ $route['confirm'] = 'booking/confirm';
 $route['check-uniq'] = 'booking/checkUniq';
 $route['booking-check'] = 'booking/bookingCheck';
 $route['booking-list'] = 'booking/bookingList';
+$route['booking-bed'] = 'bed/index';
+$route['bed-list'] = 'bed/list';
